@@ -12,7 +12,7 @@ export async function getMeals() {
 }
 
 export async function getMeal(slug) {
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  // await new Promise((resolve) => setTimeout(resolve, 5000));
   // throw new Error('Loading meals error');
   return db.prepare(`SELECT * FROM meals WHERE slug = ?`).get(slug);
 }
